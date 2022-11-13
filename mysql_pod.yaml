@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+spec:
+  containers:
+    - name: mysql
+      image: mysql:stable
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: password
+    ports:
+      containerPort: 3306
+      network_mode: host
